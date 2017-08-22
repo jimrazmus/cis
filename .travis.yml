@@ -6,8 +6,7 @@ before_install:
   - sudo apt-get update
 #  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-engine
 install:
-  - pip install molecule
-  - pip install docker-py
-  - pip install ansible-lint
+  - pip install ansible molecule docker-py ansible-lint
 script:
+  - deactivate
   - molecule test
