@@ -1,2 +1,3 @@
 ---
 # tasks file for cis
+- debug: var=ansible_hostname

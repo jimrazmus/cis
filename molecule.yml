@@ -1,14 +1,21 @@
 ---
-dependency:
-  name: galaxy
+ansible:
+  playbook: tests/playbook.yml
+
 driver:
   name: docker
+
 docker:
   containers:
-    - name: cis
+    - name: amazonlinux
+      image: amazonlinux
+      image_version: latest
+    - name: centos
+      image: centos
+      image_version: latest
+    - name: ubuntu
       image: ubuntu
       image_version: latest
-      ansible_groups:
-        - group1
-verifier:
-  name: testinfra
+
+#verifier:
+#  name: testinfra
