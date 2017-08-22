@@ -1,5 +1,7 @@
+---
 sudo: required
 language: python
+dist: trusty
 services:
   - docker
 before_install:
@@ -7,6 +9,12 @@ before_install:
 #  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-engine
 install:
   - deactivate
-  - pip install ansible molecule docker-py ansible-lint
+  - pip install ansible ansible-lint molecule docker-py
 script:
-  - molecule test
+  - molecule --debug test
+# notifications:
+#   slack:
+#     rooms:
+#       - secure: "something"
+#     on_success: always
+#   webhooks: https://galaxy.ansible.com/api/v1/notifications/
