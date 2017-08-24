@@ -1,20 +1,15 @@
----
 sudo: required
 language: python
 dist: trusty
 services:
-  - docker
+- docker
 before_install:
-  - sudo apt-get update
-#  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-engine
+- sudo apt-get update
 install:
-  - deactivate
-  - pip install ansible ansible-lint molecule docker
+- deactivate
+- pip install ansible ansible-lint molecule docker
 script:
-  - molecule --debug test
-# notifications:
-#   slack:
-#     rooms:
-#       - secure: "something"
-#     on_success: always
-#   webhooks: https://galaxy.ansible.com/api/v1/notifications/
+- molecule --debug test
+notifications:
+  slack:
+    secure: AszmjYzsoObNnUdEOPFY9HHJC4I4U7e8AdWxD8+ZR7m9xjWMmtRLOp87qnF9rdpR8lMIXd+DThioof1TGYVUbscFjsHQPTuXiDF6/ByBXQukSRszjRGjNIwMwDwVj0meB0fqhBT+kL5KuYR29mS5QSdvXcq7hCAkpnEebBo52tjfDTLfIitq7WdNmkj5vCjaTTfRo6RIm59rJqF0I3lnYcAlxce/yVQQyNDY0W8CcmEMSPVJf4kbBNYAKbbSHJOyir2Y1H7m8OuGSskRwTF5gZr9nTts2iHXJwp174BVgSuM6RKTIqer4H6WU23G84Fe46PRB0qZ7iYjV7+iIyiwjgrv+qJiprbX4SYqQY1lUtUElU2UozTsuqIIOgtKOsKi1eZjV+mJEy6BdTf2MzJ+csw80Ja8gDMRL9/5te7JTjYTJGfaGAu2zqiAY3etHdxzt7OH0OGC4gU3pAncBRRSezofj/h4H8HX5SrQDbTUN9+THEjwE9KCH/npqIxCEuo1Oe2DLWp+97C4jVdxP9JrZqSSBS8OqhR2vVNEk7DiaWPgwTLU+6eySZptSMo5/2QQ8StXSGQY/jnhtl2h7DKchQPhmtE+XbCg0I8H7hvvUFRXwZ6IIB5oEc9dujV41QGAuLJdO7fjBdo+1MLmPCuJyJkUwSxfpEdMuRIv8hZXBYE=
