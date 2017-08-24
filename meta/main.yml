@@ -1,30 +1,9 @@
 galaxy_info:
-  author: your name
-  description: your description
-  company: your company (optional)
-
-  # If the issue tracker for your role is not on github, uncomment the
-  # next line and provide a value
-  # issue_tracker_url: http://example.com/issue/tracker
-
-  # Some suggested licenses:
-  # - BSD (default)
-  # - MIT
-  # - GPLv2
-  # - GPLv3
-  # - Apache
-  # - CC-BY
-  license: license (GPLv2, CC-BY, etc)
-
-  min_ansible_version: 1.2
-
-  # Optionally specify the branch Galaxy will use when accessing the GitHub
-  # repo for this role. During role install, if no tags are available,
-  # Galaxy will use this branch. During import Galaxy will access files on
-  # this branch. If travis integration is cofigured, only notification for this
-  # branch will be accepted. Otherwise, in all cases, the repo's default branch
-  # (usually master) will be used.
-  #github_branch:
+  author: James Razmus II
+  description: Applies, or verifies, Center for Internet Security (CIS) benchmarks on target servers.
+  github_branch: master
+  license: MIT
+  min_ansible_version: 2.2.3.0
 
   #
   # Below are all platforms currently available. Just uncomment
