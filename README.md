@@ -1,20 +1,37 @@
 # cis Ansible role
 
 [![Build Status](https://travis-ci.org/jimrazmus/cis.svg?branch=master)](https://travis-ci.org/jimrazmus/cis)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/jimrazmus/cis/blob/master/LICENSE)
 
-Applies/verifies Center for Internet Security (CIS) recommendations/benchmarks to target server(s).
+Applies, or verifies, Center for Internet Security (CIS) benchmarks on target servers.
 
-## Tested versions of Ansible, CIS, and OS
+## Testing
 
-Ansible: 2.2.3.0, latest
+Each combination of the following Ansible, Python, and Operating System versions are tested.
 
-Python: 2.7, 3.4
+Ansible
 
-| OS | OS Version | CIS Specification Version |
-| --- | --- | --- |
-| Amazon Linux | 2017.03.0.20170401 | v2.0.0 - 06-02-2016 |
-| CentOS | 7 | v2.1.1 - 01-31-2017 |
-| Ubuntu | 16.04 LTS | v1.0.0 - 10-04-2016 |
+* 2.2.3.0
+* latest
+
+Python
+
+* 2.7
+* 3.4
+
+OS
+
+* Amazon Linux 2017.03.0.20170401
+* CentOS 7
+* Ubuntu 16.04 LTS
+
+## CIS Benchmark Versions
+
+| OS | CIS Specification Version |
+| --- | --- |
+| Amazon Linux | v2.0.0 - 06-02-2016 |
+| CentOS | v2.1.1 - 01-31-2017 |
+| Ubuntu | v1.0.0 - 10-04-2016 |
 
 ## Requirements
 
