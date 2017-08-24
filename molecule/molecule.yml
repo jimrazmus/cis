@@ -1,6 +1,6 @@
 ---
 ansible:
-  playbook: tests/playbook.yml
+  playbook: molecule/test.yml
 
 driver:
   name: docker
