@@ -2,14 +2,18 @@ sudo: required
 language: python
 dist: trusty
 services:
-- docker
+  - docker
+env:
+  - ANSIBLE_VERSION=latest
+  - ANSIBLE_VERSION=2.2.2.0
 before_install:
-- sudo apt-get update
+  - sudo apt-get update
 install:
-- deactivate
-- pip install ansible ansible-lint molecule docker
+  - deactivate
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
+  - pip install ansible-lint molecule docker
 script:
-- molecule --debug test
+  - molecule --debug test
 notifications:
   email: false
   slack:
