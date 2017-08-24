@@ -17,5 +17,19 @@ docker:
       image: ubuntu
       image_version: 16.04
 
+scenario:
+  name: default
+  test_sequence:
+    - destroy
+    - dependency
+    - syntax
+    - lint
+    - create
+    - converge
+    - idempotent
+    - check
+    - verify
+    - destroy
+
 #verifier:
 #  name: testinfra
