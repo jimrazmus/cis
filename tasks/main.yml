@@ -1,3 +1,5 @@
 ---
-# tasks file for cis
+
 - debug: var=ansible_hostname
+
+- include: recommendations1.yml
