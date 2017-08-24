@@ -23,7 +23,7 @@ before_install:
 install:
   - deactivate
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
-  - pip install molecule=2.0.0.rc16
+  - pip install molecule==2.0.0.rc16
   - pip install ansible-lint docker
 script:
   - molecule --debug test --destroy always
