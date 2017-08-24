@@ -2,14 +2,12 @@ dist: trusty
 env:
   - ANSIBLE_VERSION=latest
   - ANSIBLE_VERSION=2.2.3.0
-  - ANSIBLE_VERSION=2.1.6
-  - ANSIBLE_VERSION=2.0.2.0
 language: python
 notifications:
   email: false
   slack:
-    on_success: always
     on_failure: always
+    on_success: always
     secure: BbCkT2Bopq3taNyPtNyykPrE6UQBk3z7+VJ1n8pbEtQNSiRX0VM1wUG6p2ZTibKbwALgwnm4ow8KIE9uTOubkK5u48zQyNFB+cN/CNelwxOy3e4sMHGrYp+VlrwPPBFR5LfJJdga/5VAJO3RcjFIi9rbxtZYeooa7qKb6amxApxnIS+rtvxgWCfDL/aiwe3xr+If9SEPiyx1N5qtLLmSP/msjg/0H289DDecL8hM1XnqSucXu5jbHBA3KdeQmRhFkFUWBW8gkGRWnwZfRu0V2M96MvBXEs+9/+vT8hI1QMfCdmcE17+9uxnFEpaDga+7PDXN1nE6nsw3/afrG9s35ID2M0qbAS+nQBqsUvmcpQhp+4xWJetAe8xZjVTqM17qbywLuOVz/eCieKn446SWjZIGD/H3h4FeMQqlH6YKEDV0RiCw1XcxcDkMpQ3bG56H+WDDQzDi/WmIBVwHvHN1lVBIKY8++7sRMWVJC1SZjuzdtUe6WaDRX8p7yFQ81gqR3ecSa9tcF9Yah7Dt6AXDHHqXe1UJyNpMwwjz/Uvj2mTYlmFHh/NgyW2gAviWqt5LX+F/etsok3SRkeVHd68eGOFNo+nGQOBrqiZDsGI0YCnRSxQNb7fUnFQZ4NapeQqF3xpJFGFgkNfZDfwD1as4Y5l4Q4IHqKe4BOs4evpUSBw=
 #  webhooks: https://galaxy.ansible.com/api/v1/notifications/
 python:
