@@ -2,6 +2,7 @@
 dist: trusty
 env:
   - ANSIBLE_VERSION=latest
+  - ANSIBLE_VERSION=2.3.2.0
   - ANSIBLE_VERSION=2.2.3.0
 language: python
 notifications:
@@ -14,7 +15,6 @@ notifications:
 #  webhooks: https://galaxy.ansible.com/api/v1/notifications/
 python:
   - 2.7
-  - 3.4
 services:
   - docker
 sudo: required
@@ -23,7 +23,8 @@ before_install:
   - sudo apt-get update
 install:
   # yamllint disable-line rule:line-length
-  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible docker; else pip install ansible==$ANSIBLE_VERSION docker-py; fi
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
+  - if [ "$ANSIBLE_VERSION" = "2.2.3.0" ]; then pip install docker-py; else pip install docker; fi
   - pip install ansible-lint molecule==2.0.0.rc16
 script:
   - molecule --debug test
