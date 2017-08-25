@@ -23,7 +23,7 @@ before_install:
   - sudo apt-get update
 install:
   # yamllint disable-line rule:line-length
-  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
-  - pip install ansible-lint docker molecule==2.0.0.rc16
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible docker; else pip install ansible==$ANSIBLE_VERSION docker-py; fi
+  - pip install ansible-lint molecule==2.0.0.rc16
 script:
   - molecule --debug test
