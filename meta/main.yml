@@ -1,5 +1,7 @@
+---
 galaxy_info:
   author: James Razmus II
+  # yamllint disable-line rule:line-length
   description: Applies, or verifies, Center for Internet Security (CIS) benchmarks on target servers.
   github_branch: master
   license: MIT
