@@ -2,7 +2,7 @@
 - name: Check for Supported System
   assert:
     that:
-      - (ansible_os_family == 'Amazon' and
+      - (ansible_distribution == 'Amazon' and
          ansible_distribution_version >= '2017.03')
          or
         (ansible_distribution == 'CentOS' and
