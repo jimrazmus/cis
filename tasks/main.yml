@@ -2,4 +2,4 @@
 
 - debug: var=ansible_hostname
 
-- include: recommendations1.yml
+- include: benchmarks01.yml
