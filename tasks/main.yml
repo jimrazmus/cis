@@ -1,5 +1,3 @@
 ---
-
-- debug: var=ansible_hostname
-
+- include: precheck.yml
 - include: benchmarks01.yml
